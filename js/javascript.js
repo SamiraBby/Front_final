@@ -1,15 +1,30 @@
-let items = document.querySelectorAll('.carousel .carousel-item')
+(function(){
+  jQuery('#theCarousel').carousel();
 
-		items.forEach((el) => {
-			const minPerSlide = 4
-			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
-				if (!next) {
-            // wrap carousel by using first child
-            next = items[0]
+  }());
+
+  (function(){
+    jQuery('.carousel-showmanymoveone .item').each(function(){
+      var itemToClone = jQuery(this);
+
+      for (var i=1;i<3;i++) {
+        itemToClone = itemToClone.next();
+
+        // wrap around if at end of item collection
+        if (!itemToClone.length) {
+          itemToClone = jQuery(this).siblings(':first');
         }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-})
+
+        // grab item, clone, add marker class, add to collection
+        itemToClone.children(':first-child').clone()
+          .addClass("cloneditem-"+(i))
+          .appendTo(jQuery(this));
+      }
+    });
+}());
+
+(function() {
+jQuery('.carousel-showmanymoveone').carousel({
+  interval: false
+}); 
+}());
