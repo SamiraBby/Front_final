@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .categories ul li a,
 .buttons a {
   text-decoration: none;
@@ -46,8 +51,10 @@
 .signing {
   width: 100%;
   height: 500px;
-  background-image: url("../images/Joydrop-Gold2021-Hero-V4.webp");
+  background-image: url("../images/7.jpg");
   color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .signing-text,
 .e-mail-text {
@@ -59,14 +66,13 @@
   align-items: center;
 }
 .signing-text form {
-  width: 40%;
+  max-width: max-content;
   margin: auto;
   padding: 40px;
 }
 .signing-text form input,
 .signing-text form input:focus {
   background-color: transparent;
-  position: relative;
   border-width: 0 0 1px 0 !important;
 }
 .signing-text form input::placeholder {
@@ -74,13 +80,77 @@
   color: white;
 }
 .signing-text form .btn {
-  position: absolute;
-  right: 267px;
-  top: 71px;
   font-size: large;
   color: white;
 }
-
+.discount-code input {
+  position: relative;
+}
+.discount-code button {
+  position: absolute;
+  right: 15px;
+  width: 108px;
+  background: #ae4444 !important;
+}
+.text-top * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-slider-responsive img{
+  max-width: fit-content !important;
+}
+.view-all a{
+  font-size: 20px;
+}
+.footer ul li a, .footer i{
+  color: white !important;
+}
+.favorites .card-img i{
+  color: red;
+}
+.actions .container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instagram-photos img {
+  width: 12%;
+}
+.instagram-photos img:first-child,
+.instagram-photos img:last-child {
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+.instagram-photos img:nth-child(2),
+.instagram-photos img:nth-child(4),
+.instagram-photos img:nth-child(6) {
+  padding-top: 100px;
+}
+.instagram-photos img:nth-child(3),
+.instagram-photos img:nth-child(5) {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.instagram-text {
+  width: 100%;
+  margin: auto;
+}
+.instagram-text * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  background-color: rgb(7, 91, 75);
+  color: white;
+}
+.footer ul li {
+  list-style-type: none;
+}
+.footer h1 {
+  color: wheat;
+}
 @media only screen and (max-width: 600px) {
   .navbarmobile {
     display: block;
@@ -182,9 +252,65 @@
     justify-content: center;
     text-align: center;
   }
-
   .owned-business {
     display: none;
+  }
+  .checking {
+    display: block !important;
+  }
+  .first-order-img img {
+    width: 61px;
+    height: 71px;
+  }
+  .contact-label {
+    display: block !important;
+  }
+  .checking * {
+    font-size: 11px;
+  }
+  .name-group .col-md-6 {
+    display: block !important;
+  }
+  .text-top {
+    margin-top: 20px;
+  }
+  .footer-top .col-md-4:first-child, .footer-top .col-md-4:last-child{
+    display: none !important;
+  }
+  .footer .col-md-4:nth-child(2){
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .col-md-4:nth-child(2) h1, .actions .col-md-3 h1{ 
+    font-size: 20px !important;
+  }
+  .signing-text form .btn {
+    right: 53px !important;
+  }
+  .categories-choice{
+    display: none !important;
+  }
+  .categories-choice-responsive{
+    display: block !important;
+  }
+  .categories-choice-responsive .owl-theme .owl-dots .owl-dot{ 
+    display:none!important;
+  }
+  .bd-example-modal-lg h1{
+    font-size: 18px !important;
+  }
+  .navbarmobile button{
+    padding: 3px;
+    background: transparent;
+    width: 50px;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    color: #6c6c6c;
+    border-radius: 10%;
   }
 }
 
@@ -252,7 +378,7 @@
     z-index: 1;
   }
   .categories-count {
-    width: 800px;
+    max-width: max-content;
     color: brown;
     padding: 20px;
     font-size: 40px;
@@ -270,7 +396,7 @@
     width: 210px;
     height: 250px;
     opacity: 0.8;
-    right: 115px;
+    right: 23;
   }
   .example-collection .collection-text {
     position: absolute;
@@ -301,11 +427,11 @@
     position: relative;
   }
   .photo-info-right img:last-child {
-    width: 208px;
+    max-width: max-content;
     height: 215px;
     position: absolute;
     bottom: 0%;
-    left: 49%;
+    left: 41%;
   }
   .text-about * {
     display: flex;
@@ -330,66 +456,31 @@
     font-size: 20px;
     padding: 3px;
   }
-  .instagram-photos img {
-    width: 12%;
-  }
-  .instagram-photos img:first-child,
-  .instagram-photos img:last-child {
-    padding-top: 0;
-    padding-bottom: 80px;
-  }
-  .instagram-photos img:nth-child(2),
-  .instagram-photos img:nth-child(4),
-  .instagram-photos img:nth-child(6) {
-    padding-top: 100px;
-  }
-  .instagram-photos img:nth-child(3),
-  .instagram-photos img:nth-child(5) {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .instagram-text {
-    width: 100%;
-    margin: auto;
-  }
-  .instagram-text * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .footer {
-    background-color: rgb(7, 91, 75);
-    color: white;
     font-size: 13px;
   }
-  .footer ul li {
-    list-style-type: none;
-  }
-
   .footer h1 {
-    color: wheat;
     font-size: 14px;
   }
   .footer h1:nth-child(2) {
     text-align: center;
   }
-  .footer-top .col-4:first-child li {
+  .footer-top .col-md-4:first-child li {
     text-align: left !important;
   }
-  .footer-top .col-4:last-child li {
+  .footer-top .col-md-4:last-child li {
     text-align: right !important;
   }
-  .footer-bottom .col-4:first-child {
+  .footer-bottom .col-md-4:first-child {
     justify-content: flex-start;
   }
-  .footer-bottom .col-4:last-child {
+  .footer-bottom .col-md-4:last-child {
     justify-content: flex-end;
   }
-  .footer-top .col-4:nth-child(2) {
+  .footer-top .col-md-4:nth-child(2) {
     text-align: center;
   }
-  .footer-bottom .col-4:nth-child(2) {
+  .footer-bottom .col-md-4:nth-child(2) {
     justify-content: center;
   }
 
@@ -402,10 +493,9 @@
   .dropdown-menu {
     background-color: rgb(211, 146, 66) !important;
   }
-  .text-top * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* best sellers start */
+  .contact-info {
+    padding-left: 10px;
   }
   .products-count {
     justify-content: flex-end !important;
@@ -416,11 +506,31 @@
     border: 1px solid black;
     border-radius: 10px;
   }
-  .item:first-child div:first-child {
+  .item div:first-child {
     padding-left: 0 !important;
   }
-  .item:not(:first-child) div:first-child {
-    padding-left: 10px !important;
+  .item .col-xs-12 {
+    margin-top: 10px;
+  }
+  .item:nth-child(3) div:first-child, .item:nth-child(6) div:first-child, .item:nth-child(9) div:first-child, .item:nth-child(12) div:first-child {
+    padding-right: 0 !important;
+  }
+  .left-group {
+    padding-left: 0 !important;
+  }
+  .right-group {
+    padding-right: 0 !important;
+  }
+  .first-order-img img {
+    width: 122px;
+    height: 143px;
+  }
+  .checking-right {
+    margin-left: 40px;
+    background-color: aquamarine;
+  }
+  .bd-example-modal-lg .modal-content {
+    max-width: 1000px !important;
   }
 }
 
@@ -431,6 +541,16 @@
   }
   .categories ul li:last-child {
     display: block !important;
+  }
+  .checking {
+    display: block !important;
+  }
+  .checking-right {
+    margin: 20px 0 0 0 !important;
+  }
+  .categories-choice .category{
+    overflow: hidden !important;
+    padding: 3px;
   }
 }
 
